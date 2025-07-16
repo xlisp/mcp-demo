@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "local-assistant": {
+      "command": "python",
+      "args": ["mcp_server.py"],
+      "env": {
+        "ANTHROPIC_API_KEY": "your_claude_api_key_here"
+      }
+    }
+  },
+  "security": {
+    "allowedCommands": [
+      "ls", "dir", "pwd", "echo", "cat", "grep",
+      "python", "pip", "git", "npm", "node"
+    ],
+    "restrictedPaths": [
+      "/etc", "/usr/bin", "/System"
+    ],
+    "maxExecutionTime": 30
+  },
+  "applications": {
+    "common": {
+      "notepad": "notepad.exe",
+      "calculator": "calc.exe",
+      "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "terminal": "cmd.exe",
+      "vscode": "code"
+    }
+  }
+}
